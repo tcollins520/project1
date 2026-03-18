@@ -11,8 +11,8 @@ FREE_SPACE=$(free -mt | grep "Total" | awk '{print $4}')
 
 Threshold=4000
 
-#if [[ $FREE_SPACE -lt Threshold ]]
-# then
+if [[ $FREE_SPACE -lt Threshold ]]
+ then
         echo "Running low on Ram space"
 else
         echo "RAM space is sufficient $FREE_SPACE M"
